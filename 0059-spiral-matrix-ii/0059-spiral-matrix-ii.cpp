@@ -25,7 +25,6 @@ public:
             j++;
             upper--;
             lower++;
-            cout<<num;
         }
         if(n%2==1){
             ans[i][j] = num;
