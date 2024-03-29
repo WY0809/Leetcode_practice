@@ -18,19 +18,11 @@ public:
                 head = head->next;
                 pre = pre ->next;
             }else if(temp->val == val){
-                // if(temp->next != nullptr)
-                //     temp -> next = temp->next->next;
-                // else
-                //     temp -> next = nullptr;
                 pre->next = temp->next;
             }else{
                 pre = temp;
-            }
-                
+            }   
                 temp = temp->next;
-            
-            
-            
         }
         return head;
     }
