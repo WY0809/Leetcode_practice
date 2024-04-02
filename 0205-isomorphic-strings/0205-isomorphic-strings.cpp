@@ -23,8 +23,6 @@ public:
                 m2.insert(pair<char,char>(t[i],s[i]));
             }    
         }
-        cout<<s<<endl;
-        cout<<t<<endl;
         return true;
     }
 };
