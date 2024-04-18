@@ -31,6 +31,7 @@ public:
                 temp->val = list2->val;
                 list2 = list2->next;
             }
+            
             if(list1 != nullptr || list2 != nullptr){
                 temp->next = new ListNode();
                 temp = temp->next;
