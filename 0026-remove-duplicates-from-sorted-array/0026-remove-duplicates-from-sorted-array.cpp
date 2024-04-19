@@ -1,13 +1,18 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        for(auto iter = nums.begin(); iter != nums.end()-1; iter++){
-            cout<<*iter<<*(iter+1)<<endl;
-            if(*iter == *(iter+1)){
-                nums.erase(iter);
-                iter--;
+        int i = 1, j = 0;
+        
+        while(i<nums.size()){
+            if(nums[i]==nums[j]){
+                i++;
+            }
+            else{
+                j++;
+                nums[j] = nums[i];
+                i++;
             }
         }
-        return nums.size();
+        return j+1;
     }
 };
