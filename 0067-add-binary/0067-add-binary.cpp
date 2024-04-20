@@ -1,10 +1,10 @@
 class Solution {
 public:
     string addBinary(string a, string b) {
-      int i = a.size() - 1;
+        int i = a.size() - 1;
         int j = b.size() - 1;
         int carry = 0;
-        string res = "";
+        string ans = "";
         while (i >= 0 || j >= 0) {
             int sum = carry;
 
@@ -18,11 +18,11 @@ public:
             }
 
             carry = sum > 1 ? 1 : 0;
-            res += to_string(sum % 2);
+            ans += to_string(sum % 2);
         }
         if (carry) 
-            res += to_string(carry);
-        reverse(res.begin(), res.end());
-        return res;
+            ans += to_string(carry);
+        reverse(ans.begin(), ans.end());
+        return ans;
     }
 };
