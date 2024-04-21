@@ -14,8 +14,6 @@ public:
         if(head == nullptr){
             return head;
         }
-
-
         ListNode *ans = head;
         while(head->next != nullptr ){
             if(head->val == head->next->val){
