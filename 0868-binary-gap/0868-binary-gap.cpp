@@ -1,24 +1,20 @@
 class Solution {
 public:
     int binaryGap(int n) {
-        vector<int> binary;
+        vector<int> location;
+        int count = 0;
         while(n>0){
-            binary.push_back(n%2);
-            n /= 2;
+            if(n%2)
+                location.push_back(count);
+            n = n >> 1;
+            count++;
         }
-
         int max = 0;
-        int last = 0 , now;
-        for(int i = binary.size()-1 ; i >= 0 ; --i){
-            if(binary[i] == 1){
-                if(max < last - i ){
-                    max = last - i;
-                }
-                last = i;
+        for(int i = 0 ; i < location .size()-1; ++i){
+            if(location[i+1]-location[i] > max){
+                max = location[i+1]-location[i];
             }
         }
-        cout<<max;
-
         return max;
     }
 };
