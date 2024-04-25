@@ -3,7 +3,6 @@ public:
     void rotate(vector<int>& nums, int k) {
         int length = nums.size();
         vector<int> temp(length);
-        k %= length;
         for(int i = 0; i < length ; i++)
         {
             temp[(i+k)%length] = nums[i];
