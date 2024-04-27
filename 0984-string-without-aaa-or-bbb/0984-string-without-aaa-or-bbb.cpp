@@ -2,7 +2,7 @@ class Solution {
 public:
     string strWithout3a3b(int a, int b) {
         string ans;
-        while (a != 0 && b != 0) {
+        while (a  && b ) {
             cout << ans << " ";
 
             if (a - 2 >= b) {
