@@ -18,8 +18,6 @@ public:
                 b--;
                 a--;
             }
-            cout << a << " " << b << " ";
-            cout << ans << endl;
         }
         while(a--){
             ans+="a";
