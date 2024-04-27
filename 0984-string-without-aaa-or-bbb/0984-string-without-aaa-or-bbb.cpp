@@ -2,9 +2,7 @@ class Solution {
 public:
     string strWithout3a3b(int a, int b) {
         string ans;
-        while (a  && b ) {
-            cout << ans << " ";
-
+        while (a && b) {
             if (a - 2 >= b) {
                 ans += "aab";
                 a -= 2;
@@ -19,11 +17,11 @@ public:
                 a--;
             }
         }
-        while(a--){
-            ans+="a";
+        while (a--) {
+            ans += "a";
         }
-        while(b--){
-            ans+="b";
+        while (b--) {
+            ans += "b";
         }
         return ans;
     }
