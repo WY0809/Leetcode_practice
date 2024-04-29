@@ -5,14 +5,7 @@ public:
         for(int j = i+1 ; j < nums.size() ; j++){    
             if(i != nums.size()-1 && pre[pre.size()-1] <= nums[j]){
                 pre.push_back(nums[j]);
-                // auto it = find(b.begin(), b.end(), pre);
-                // if(it == b.end()){
-                    b.push_back(pre);
-                // }
-                // for(int k = 0 ; k < pre.size(); k++){
-                //     cout<<pre[k];
-                // }
-                // cout<<endl;
+                b.push_back(pre);
                 vector<vector<int>> temp = sub(nums , j , pre);
                 b.insert(b.end(),temp.begin(),temp.end());
                 pre.pop_back();
