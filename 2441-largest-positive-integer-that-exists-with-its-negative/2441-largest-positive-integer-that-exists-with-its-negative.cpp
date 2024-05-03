@@ -1,18 +1,17 @@
 class Solution {
 public:
     int findMaxK(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int i = 0 , j = nums.size()-1;
-        while(-nums[i] != nums[j]){
-            if(i >= j){
-                return -1;
-            }
-            if(-nums[i] >= nums[j]){
-                i++;
-            }else{
-                j--;
+        int ans = -1;
+        for(int i = 0; i < nums.size(); i++)
+        {
+            for(int j = i+1; j < nums.size(); j++)
+            {
+                if(nums[i] == -nums[j] && abs(nums[i]) > ans)
+                {
+                    ans = abs(nums[i]);
+                }
             }
         }
-        return nums[j];
+        return ans;
     }
 };
