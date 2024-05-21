@@ -1,22 +1,20 @@
 class MyHashMap {
 public:
-map<int, int> Map;
+int map[1000001];
     MyHashMap() {
+        memset(map,-1,sizeof(map));
     }
     
     void put(int key, int value) {
-        Map[key] = value;
+        map[key] = value;
     }
     
     int get(int key) {
-        if(Map.count(key)){
-            return Map[key];
-        }
-        return -1;
+        return map[key];
     }
     
     void remove(int key) {
-        Map.erase(key);
+        map[key] = -1;
     }
 };
 
