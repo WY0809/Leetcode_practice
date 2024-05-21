@@ -9,7 +9,7 @@ map<int, int> Map;
     }
     
     int get(int key) {
-        if(Map[key]){
+        if(Map.count(key)){
             return Map[key];
         }
         return -1;
