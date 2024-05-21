@@ -1,6 +1,6 @@
 class MyHashMap {
 public:
-int map[1000001];
+    int map[1000001];
     MyHashMap() {
         memset(map,-1,sizeof(map));
     }
