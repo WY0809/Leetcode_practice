@@ -5,8 +5,7 @@ class Solution:
 
         CountS, CountT = {}, {}
 
-        for i in s:
-            CountS[i] = 1 + CountS.get(i, 0)
-        for i in t:
-            CountT[i] = 1 + CountT.get(i, 0)
+        for i in range(len(s)):
+            CountS[s[i]] = 1 + CountS.get(s[i], 0)
+            CountT[t[i]] = 1 + CountT.get(t[i], 0)
         return CountS == CountT
