@@ -5,15 +5,15 @@ class Solution:
         hashmap = {')':'(', ']':'[', '}':'{'}
 
         left = ['(', '[', '{']
-        right = [')', ']', '}']
+        # right = [')', ']', '}']
         stack = []
         for i, n in enumerate(s):
-            print(i,n)
+            # print(i,n)
             if n in left:
                 stack.append(n)
-                print(n)
+                # print(n)
             else:
-                print(hashmap[n])
+                # print(hashmap[n])
                 # print(stack[-1])
                 if len(stack) == 0 or hashmap[n] != stack[-1]:
                     return False
