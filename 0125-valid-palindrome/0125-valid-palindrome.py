@@ -1,11 +1,7 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         l, r = 0, len(s) - 1
-        print(ord('A'))
-        print(ord('A'))
-        print(ord('A'))
-        print(ord('A'))
-        print(ord('A'))
+        
         while l < r:
             while l < r and not self.alphaNum(s[l]):
                 l += 1
@@ -17,7 +13,7 @@ class Solution:
         return True
     
     def alphaNum(self, c):
-        
-        return (ord('A') <= ord(c) <= ord('Z') or 
-                ord('a') <= ord(c) <= ord('z') or 
-                ord('0') <= ord(c) <= ord('9'))
+        t=ord(c)
+        return (65 <= t <= 90 or 
+                97 <= t <= 122 or 
+                48 <= t <= 57)
