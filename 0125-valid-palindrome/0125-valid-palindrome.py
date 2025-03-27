@@ -4,7 +4,6 @@ class Solution:
         R = len(s)-1
 
         while(L < R):
-            print(L,R,s[L],s[R])
             if not s[L].isalnum():
                 L += 1
             elif not s[R].isalnum():
