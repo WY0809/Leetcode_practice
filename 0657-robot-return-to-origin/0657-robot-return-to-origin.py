@@ -4,18 +4,23 @@ class Solution(object):
         :type moves: str
         :rtype: bool
         """
-        x,y = 0, 0 
-        for i in moves:
-            if i == 'R':
-                x += 1
-            elif i == 'L':
-                x -= 1
-            elif i == 'U':
-                y += 1
-            elif i == 'D':
-                y -= 1        
-        if (x,y) == (0,0):
-            return True
-        else:
-            return False
+        # x,y = 0, 0 
+        # for i in moves:
+        #     if i == 'R':
+        #         x += 1
+        #     elif i == 'L':
+        #         x -= 1
+        #     elif i == 'U':
+        #         y += 1
+        #     elif i == 'D':
+        #         y -= 1        
+        # if (x,y) == (0,0):
+        #     return True
+        # else:
+        #     return False
         
+        L = moves.count('L')
+        R = moves.count('R')
+        U = moves.count('U')
+        D = moves.count('D')
+        return L == R and U == D
