@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: str
         """
         ans = ""
-        n = len(strs)
         k = len(strs[0])
         
         # first = strs[0]
@@ -14,9 +13,7 @@ class Solution(object):
         for i in range(k):
             for j in strs[1:]:
                 if i+1 > len(j) or j[i] != strs[0][i]:
-                    
                     return ans 
-
             ans += strs[0][i]
         return ans
 
