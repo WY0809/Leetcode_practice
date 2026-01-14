@@ -26,8 +26,8 @@
 
 class Solution(object):
     def longestCommonPrefix(self, strs):
-        if not strs:
-            return ""
+        # if not strs:
+        #     return ""
 
         first = strs[0]
         for i, ch in enumerate(first):
