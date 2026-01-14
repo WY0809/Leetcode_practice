@@ -12,16 +12,12 @@ class Solution(object):
         # for i, ch in enumerate(first):
 
         for i in range(k):
-            stop = False
             for j in strs[1:]:
                 if i+1 > len(j) or j[i] != strs[0][i]:
-                    stop = True
+                    
                     return ans 
-        
-                
 
             ans += strs[0][i]
-
         return ans
 
 
