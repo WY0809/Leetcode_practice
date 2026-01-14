@@ -5,14 +5,11 @@ class Solution(object):
         :rtype: str
         """
         ans = ""
-        k = len(strs[0])
-        
-        first = strs[0]
-        for i, ch in enumerate(first):
+        for i, ch in enumerate(strs[0]):
             for j in strs[1:]:
-                if i+1 > len(j) or j[i] != strs[0][i]:
+                if i >= len(j) or j[i] != ch:
                     return ans 
-            ans += strs[0][i]
+            ans += ch
         return ans
 
 
