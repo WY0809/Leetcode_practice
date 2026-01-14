@@ -6,8 +6,8 @@ class Solution(object):
         """
         ans = ""
         for i, ch in enumerate(strs[0]):
-            for j in strs[1:]:
-                if i >= len(j) or j[i] != ch:
+            for s in strs[1:]:
+                if i >= len(j) or s[i] != ch:
                     return ans 
             ans += ch
         return ans
