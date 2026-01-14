@@ -7,15 +7,21 @@ class Solution(object):
         ans = ""
         k = len(strs[0])
         
-        # first = strs[0]
-        # for i, ch in enumerate(first):
-
-        for i in range(k):
+        first = strs[0]
+        for i, ch in enumerate(first):
             for j in strs[1:]:
                 if i+1 > len(j) or j[i] != strs[0][i]:
                     return ans 
             ans += strs[0][i]
         return ans
+
+
+        # for i in range(k):
+        #     for j in strs[1:]:
+        #         if i+1 > len(j) or j[i] != strs[0][i]:
+        #             return ans 
+        #     ans += strs[0][i]
+        # return ans
 
 
 # class Solution(object):
