@@ -13,9 +13,6 @@ class Solution(object):
                 if i+1 > len(j) or j[i] != strs[0][i]:
                     stop = True
                     break 
-                # if :
-                #     stop = True
-                #     break
             if stop:
                 break
 
