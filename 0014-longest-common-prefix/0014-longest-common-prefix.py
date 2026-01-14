@@ -10,9 +10,12 @@ class Solution(object):
         for i in range(k):
             stop = False
             for j in strs[1:]:
-                if i+1 > len(j) or j[i] != strs[0][i]:
+                if i+1 > len(j):
                     stop = True
                     break 
+                if j[i] != strs[0][i]:
+                    stop = True
+                    break
             if stop:
                 break
 
