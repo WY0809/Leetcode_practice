@@ -7,7 +7,7 @@ class Solution(object):
         ans = ""
         for i, ch in enumerate(strs[0]):
             for s in strs[1:]:
-                if i >= len(j) or s[i] != ch:
+                if i >= len(s) or s[i] != ch:
                     return ans 
             ans += ch
         return ans
