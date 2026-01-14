@@ -18,7 +18,6 @@ class Solution(object):
                     stop = True
                     return ans 
         
-            if stop:
                 
 
             ans += strs[0][i]
