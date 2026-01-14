@@ -16,10 +16,10 @@ class Solution(object):
             for j in strs[1:]:
                 if i+1 > len(j) or j[i] != strs[0][i]:
                     stop = True
-                    break 
+                    return ans 
         
             if stop:
-                return ans
+                
 
             ans += strs[0][i]
 
