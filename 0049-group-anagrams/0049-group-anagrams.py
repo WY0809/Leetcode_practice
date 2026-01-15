@@ -7,7 +7,7 @@ class Solution(object):
                
         groups = {}
         for i in strs:
-            key = "".join(sorted(i))
+            key = tuple(sorted(i))
             if key not in groups:
                 groups[key] = []
             groups[key].append(i)
