@@ -12,4 +12,4 @@ class Solution(object):
                 groups[key] = []
             groups[key].append(i)
 
-        return list(groups.values())
+        return groups.values()
