@@ -11,12 +11,6 @@ class Solution(object):
             dic[i] += 1
 
         dic = sorted(dic.items(), key=lambda x: -x[1])
-        print(dic)
 
-        ans =[]
-        for i , j in dic:
-            ans.append(i)
-        print(ans)
-    
-
-        return ans[:k]
+        ans =[i for i,j in dic[:k]]
+        return ans
