@@ -10,17 +10,13 @@ class Solution(object):
         for i in nums:
             dic[i] += 1
 
-        s = sorted(dic.values(), reverse = True)
-        
-        ans = []
-        i = 0
-        while i < k:
-            for key, value in dic.items():
-                if i == k:
-                    break
-                elif value == s[i]:
-                    print(key)
-                    ans.append(key)
-                    i += 1
+        dic = sorted(dic.items(), key=lambda x: -x[1])
+        print(dic)
 
-        return ans
+        ans =[]
+        for i , j in dic:
+            ans.append(i)
+        print(ans)
+    
+
+        return ans[:k]
