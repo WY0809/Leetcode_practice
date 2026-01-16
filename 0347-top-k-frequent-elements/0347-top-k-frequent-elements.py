@@ -9,7 +9,6 @@ class Solution(object):
 
         for i in nums:
             dic[i] += 1
-        print(dic)
 
         s = sorted(dic.values(), reverse = True)
         
@@ -22,7 +21,6 @@ class Solution(object):
                 elif value == s[i]:
                     print(key)
                     ans.append(key)
-                    # print(key, value)
                     i += 1
 
         return ans
