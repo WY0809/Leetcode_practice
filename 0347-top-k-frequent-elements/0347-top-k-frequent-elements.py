@@ -12,13 +12,11 @@ class Solution(object):
         print(dic)
 
         s = sorted(dic.values(), reverse = True)
-        # print(s)
-
+        
         ans = []
         i = 0
         while i < k:
             for key, value in dic.items():
-                # print(key,)
                 if i == k:
                     break
                 elif value == s[i]:
