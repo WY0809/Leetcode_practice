@@ -13,9 +13,6 @@ class Solution(object):
             else:
                 zero += 1
 
-        print(mul)
-        print(zero)
-
         ans = []
         if zero > 1:
             ans = [0] * len(nums)
