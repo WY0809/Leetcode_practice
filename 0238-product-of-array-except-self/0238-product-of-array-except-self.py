@@ -4,28 +4,19 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        mul = 1
-        zero = 0
-        
-        for i in nums:
-            if i != 0:
-                mul *= i
-            else:
-                zero += 1
+        n = len(nums)
+        ans = [1] * n
 
-        ans = []
-        if zero > 1:
-            ans = [0] * len(nums)
-        elif zero == 1:
-            for i in nums:
-                if i != 0:
-                    ans.append(0)
-                else:
-                    ans.append(mul)
-        else:
-            for i in nums:
-                ans.append(mul/i)
-                
-            
+        # left pass
+        left = 1
+        for i in range(n):
+            ans[i] = left
+            left *= nums[i]
+
+        # right pass
+        right = 1
+        for i in range(n-1 ,-1, -1):
+            ans[i] *= right
+            right *= nums[i]
+
         return ans
-
