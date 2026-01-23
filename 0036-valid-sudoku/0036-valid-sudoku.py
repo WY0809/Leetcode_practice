@@ -10,20 +10,16 @@ class Solution(object):
             for j in range(9):
                 num = board[i][j]
                 if num != ".":
-                    # box_row = i // 3
-                    # box_col = j // 3
-                    box = i // 3*3 + j // 3
+                    box = i // 3 * 3 + j // 3
                     
-                    temp = []
-                    temp.append(("row",i,num))
-                    temp.append(("col",j,num))
-                    temp.append(("box",box,num))
-
+                    temp = [
+                    ("row",i,num),
+                    ("col",j,num),
+                    ("box",box,num)
+                    ]
                     for k in temp:
                         if k in seen:
                             return False
                         seen.add(k)
-                    
-
         return True
                     
