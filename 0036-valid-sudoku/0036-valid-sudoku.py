@@ -14,12 +14,12 @@ class Solution(object):
 
                 box = (i // 3) * 3 + (j // 3)
     
-                for key in (
+                for k in (
                 ("row",i,num),
                 ("col",j,num),
                 ("box",box,num)
                 ):
-                    if key in seen:
+                    if k in seen:
                         return False
                     seen.add(k)
         return True
