@@ -16,8 +16,8 @@ class Solution(object):
                     print(i,j,box,num)
                     
                     temp = []
-                    temp.append(("row",j,num))
-                    temp.append(("col",i,num))
+                    temp.append(("row",i,num))
+                    temp.append(("col",j,num))
                     temp.append(("box",box,num))
 
                     for k in temp:
