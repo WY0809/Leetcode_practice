@@ -10,9 +10,9 @@ class Solution(object):
             for j in range(9):
                 num = board[i][j]
                 if num != ".":
-                    box_col = i // 3
-                    box_row = j // 3
-                    box = box_col*3 + box_row
+                    box_row = i // 3
+                    box_col = j // 3
+                    box = box_row*3 + box_col
                     print(i,j,box,num)
                     
                     temp = []
