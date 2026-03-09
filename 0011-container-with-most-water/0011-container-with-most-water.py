@@ -12,6 +12,5 @@ class Solution:
                 right -= 1
             else:
                 left += 1
-        
-        print(container)
+                
         return container
