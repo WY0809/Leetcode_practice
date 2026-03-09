@@ -4,13 +4,11 @@ class Solution:
         container = 0
         while left < right:
             current = (right - left) * min(height[left], height[right])
-
-            if current > container:
-                container = current
-
-            if height[left] > height[right]:
-                right -= 1
-            else:
+            container = max(container, current)
+            
+            if height[left] < height[right]:
                 left += 1
-                
+            else:
+                right -= 1
+
         return container
