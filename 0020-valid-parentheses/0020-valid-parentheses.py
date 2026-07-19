@@ -2,15 +2,25 @@ class Solution:
     def isValid(self, s: str) -> bool:
         if len(s) % 2 != 0:
             return False
-        hashmap = {')':'(', ']':'[', '}':'{'}
+
+        hashmap = {
+            ')': '(',
+            ']': '[',
+            '}': '{'
+        }
+
         stack = []
-        
-        for i in s:   
-            if i in hashmap:
-                if not stack or hashmap[i] != stack[-1]:
+
+        for char in s:
+            if char in hashmap:
+                if not stack or hashmap[char] != stack[-1]:
                     return False
                 stack.pop()
             else:
-                stack.append(i)
+                stack.append(char)
 
-        return True if not stack else False
+        return not stack
+
+# Synced seamlessly with LeetHub Pro
+# Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
+# Get it here: https://chromewebstore.google.com/detail/bcilpkkbokcopmabingnndookdogmbna
