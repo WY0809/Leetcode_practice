@@ -1,8 +1,9 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        # return Counter(s) == Counter(t)
         if len(s) != len(t):
             return False
-        # return Counter(s) == Counter(t)
+        
         CountS, CountT = {}, {}
 
         for i in range(len(s)):
