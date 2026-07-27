@@ -5,7 +5,7 @@ class Solution:
         for i in nums:
             freq[i] += 1
         
-        return sorted(freq.keys(), key = freq.get, reverse=True)[:k]
+        return sorted(freq, key = freq.get, reverse=True)[:k]
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
