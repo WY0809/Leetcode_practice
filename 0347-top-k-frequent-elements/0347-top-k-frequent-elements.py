@@ -1,15 +1,12 @@
-class Solution(object):
-    def topKFrequent(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: List[int]
-        """
-        dic = defaultdict(int)
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        freq = defaultdict(int)
+
         for i in nums:
-            dic[i] += 1
+            freq[i] += 1
+        
+        return sorted(freq, key = freq.get, reverse=True)[:k]
 
-        dic = sorted(dic.items(), key=lambda x: -x[1])
-
-        ans =[num for num, _ in dic[:k]]
-        return ans
+# Synced seamlessly with LeetHub Pro
+# Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
+# Get it here: https://chromewebstore.google.com/detail/bcilpkkbokcopmabingnndookdogmbna
