@@ -4,16 +4,16 @@ class Solution:
             return 0
 
         nums = sorted(set(nums))
-        count = longest = 1
+        count = ans = 1
 
-        for i in range(1, len(nums)):
-            if nums[i] == nums[i - 1] + 1:
+        for i in range(len(nums) - 1):
+            if nums[i] + 1 == nums[i + 1]:
                 count += 1
             else:
-                longest = max(longest, count)
+                ans = max(ans, count)
                 count = 1
 
-        return max(longest, count)
+        return max(ans, count)
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
