@@ -3,11 +3,13 @@ class Solution:
         L = 0
         count = Counter()
         longest = 0
+        max_count = 0
 
         for R in range(len(s)):
             count[s[R]] += 1
+            max_count = max(max_count, count[s[R]])
 
-            while (R - L + 1) - max(count.values()) > k:
+            while (R - L + 1) - max_count > k:
                 count[s[L]] -= 1
                 L += 1
 
