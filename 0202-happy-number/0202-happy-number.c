@@ -7,14 +7,11 @@ bool isHappy(int n) {
             Sum += temp * temp;
             n /= 10;
         }
-        
+
         n = Sum;
     }
 
-    if (n == 1)
-        return true;
-    else
-        return false;
+    return n == 1;
 }
 
 // Synced seamlessly with LeetHub Pro
