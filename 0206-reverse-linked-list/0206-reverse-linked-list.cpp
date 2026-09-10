@@ -13,16 +13,18 @@ public:
     ListNode* reverseList(ListNode* head) {
         if(head == nullptr) return nullptr;
 
-        ListNode *ans = new ListNode();
-        while(1){
-            ans -> val = head -> val;
-            ListNode *temp = new ListNode();
-            temp -> next = ans;
-            if(head -> next == nullptr){
-                return ans;
-            }
-            ans = temp;
-            head = head -> next;
+        ListNode *prev = nullptr;
+        ListNode *curr = head;
+        while(curr){
+            ListNode *temp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = temp;
         }
+        return prev;
     }
 };
+
+// Synced seamlessly with LeetHub Pro
+// Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
+// Get it here: https://chromewebstore.google.com/detail/bcilpkkbokcopmabingnndookdogmbna
