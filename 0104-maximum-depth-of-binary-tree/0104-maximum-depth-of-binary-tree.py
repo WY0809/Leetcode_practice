@@ -6,13 +6,10 @@
 #         self.right = right
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        def depth(curr):
-            if not curr:
-                return 0
-                
-            return max(depth(curr.left), depth(curr.right)) + 1
-
-        return depth(root)
+        if not root:
+            return 0
+            
+        return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
